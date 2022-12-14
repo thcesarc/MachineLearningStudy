@@ -16,7 +16,7 @@ dataset = pd.read_csv("../../Data/50_Startups.csv")
 X = dataset.iloc[: , :-1].values
 y = dataset.iloc[: ,  -1].values
 
-print(X,'\n')
+#print(X,'\n')
 
 #Encoding categorical data
 from sklearn.compose       import ColumnTransformer
@@ -24,7 +24,7 @@ from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer (transformers=[('encoder',OneHotEncoder(),[3])], remainder='passthrough' )
 X  = np.array(ct.fit_transform(X))
 
-print(X)
+#print(X)
 
 #Spliting the dataset
 from sklearn.model_selection import train_test_split
